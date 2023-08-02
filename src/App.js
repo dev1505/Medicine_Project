@@ -29,6 +29,7 @@ function App() {
             }
           ></Route>
           <Route path="/about" element={<Dropdownmenu></Dropdownmenu>}></Route>
+          <Route path="/aboutus" element={<Dropdownmenu></Dropdownmenu>}></Route>
           <Route
             path="/company"
             element={<Companyitems></Companyitems>}
