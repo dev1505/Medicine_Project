@@ -1,8 +1,8 @@
 .company_whole_style {
-  @media (max-width:600px) {
+  @media screen and (max-width:600px) {
     padding: 10%;
   }
-  @media (min-width: 600px) {
+  @media screen and (min-width: 600px) {
     padding-inline: 7%;
     padding-top: 5%;
   }
@@ -12,14 +12,14 @@
 
 .company_data_style {
 
-  @media (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     display: flex;
     flex-direction: column;
     border: 1px solid white;
     border-radius: 10px;
     width: 100%;
   }
-  @media (min-width: 600px) {
+  @media screen and (min-width: 600px) {
     display: flex;
     border: 1px solid white;
     border-radius: 10px;
@@ -30,13 +30,16 @@
 }
 
 .company_data_info_style1 {
-  @media (min-width: 750px) {
+  @media screen and (min-width: 750px) {
     min-width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-size: x-large;
   }
 
-  @media (max-width: 750px) {
+  @media screen and (max-width: 750px) {
     width: 100%;
     justify-content: center;
     text-align: center;
@@ -46,13 +49,16 @@
 }
 
 .company_data_info_style2 {
-  @media (min-width: 750px) {
+  @media screen and (min-width: 750px) {
     min-width: 65%;
-    text-align:  center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-size: x-large;
   }
 
-  @media (max-width: 750px) {
+  @media screen and (max-width: 750px) {
     width: 100%;
     justify-content: center;
     text-align: center;
