@@ -227,7 +227,7 @@
 
 .home_firms {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   padding-block: 5px;
   width: 100%;   
