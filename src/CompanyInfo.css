@@ -3,80 +3,67 @@
     padding: 10%;
   }
   @media (min-width: 600px) {
-    padding: 4%;
+    padding-inline: 7%;
+    padding-top: 5%;
   }
   color: rgb(253, 253, 253);
   background-color: black;
 }
 
 .company_data_style {
-  @media (min-width: 600px) {
-    display: flex;
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 2%;
-  }
 
   @media (max-width: 600px) {
     display: flex;
     flex-direction: column;
-    padding: 5%;
-    /* justify-content:space-between; */
     border: 1px solid white;
     border-radius: 10px;
     width: 100%;
   }
+  @media (min-width: 600px) {
+    display: flex;
+    border: 1px solid white;
+    border-radius: 10px;
+  }
+
   justify-content: center;
   align-items: center;
-  
   background-image: radial-gradient(circle, rgb(8, 0, 0), rgb(148, 148, 147));
+
 }
 
 .company_data_info_style1 {
   @media (min-width: 750px) {
-    width: 45%;
-    /* justify-content:  start; */
+    width: 65%;
     text-align: center;
-    padding: 4%;
     font-size: x-large;
   }
 
   @media (max-width: 750px) {
     width: 100%;
     justify-content: center;
-    text-align: start;
-    padding: 4%;
-    font-size: medium;
+    text-align: center;
+    font-size: large;
   }
+  padding: 4%;
 }
 
 .company_data_info_style2 {
   @media (min-width: 750px) {
-    width: 45%;
+    width: 65%;
     text-align:  center;
-    padding: 4%;
     font-size: x-large;
   }
 
   @media (max-width: 750px) {
     width: 100%;
-    text-align: start;
-    padding: 4%;
-    font-size: medium;
+    justify-content: center;
+    text-align: center;
+    font-size: large;
   }
+  padding: 4%;
 }
 
-.company_data_image_style {
-  @media (min-width: 750px) {
-    width: 35%;
-    min-height: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-  }
 
-  @media (max-width: 750px) {
-    width: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-  }
+.company_data_image_style {
+  padding: 4%;
 }
