@@ -50,7 +50,7 @@ export default function CompanyInfo() {
         <div key={data.id} className="company_data_style">
           <div className="company_data_info_style1">{data.info}</div>
           <div className="company_data_image_style">
-            <img src={data.work_img} alt="hello" style={{ width: "100%", height:"100%", borderRadius:"10px"}} />
+            <img src={data.work_img} alt="hello" className="image_styling_companyinfo"/>
           </div>
         </div>
       );
@@ -59,7 +59,7 @@ export default function CompanyInfo() {
       data_component = (
         <div key={data.id} className="company_data_style">
           <div className="company_data_image_style">
-            <img src={data.work_img} alt="hello" style={{ width: "100%",height:"100%", borderRadius:"10px"}} />
+            <img src={data.work_img} alt="hello" className="image_styling_companyinfo"/>
           </div>
           <div className="company_data_info_style2">{data.info}</div>
         </div>

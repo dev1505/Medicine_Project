@@ -33,7 +33,7 @@
   @media screen and (min-width: 750px) {
     min-width: 65%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     font-size: x-large;
@@ -49,14 +49,7 @@
 }
 
 .company_data_info_style2 {
-  @media screen and (min-width: 750px) {
-    min-width: 65%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: x-large;
-  }
+  
 
   @media screen and (max-width: 750px) {
     width: 100%;
@@ -64,10 +57,25 @@
     text-align: center;
     font-size: large;
   }
+
+  @media screen and (min-width: 750px) {
+    min-width: 65%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-size: x-large;
+  }
   padding: 4%;
 }
 
+.image_styling_companyinfo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
 .company_data_image_style {
-  padding: 4%;
+  padding: 2%;
 }
