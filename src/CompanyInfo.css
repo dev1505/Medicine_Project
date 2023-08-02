@@ -1,17 +1,11 @@
 .company_whole_style {
   @media (max-width:600px) {
-    padding-inline: 10%;
-    padding-block-start: 10%;
+    padding: 10%;
   }
   @media (min-width: 600px) {
-    padding-inline: 4%;
-    padding-block-start: 4%
-    
+    padding: 4%;
   }
   color: rgb(253, 253, 253);
-  /* @media (max-width: 400px) {
-    display: none;
-  } */
   background-color: black;
 }
 
