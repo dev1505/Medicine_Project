@@ -2,6 +2,7 @@ import React from "react";
 import { useSearchParams } from "react-router-dom";
 import image1 from "./Companyinfo_1.jpg";
 import "./MedicineInfo.css";
+import { dividerClasses } from "@mui/material";
 export default function Search() {
     let [searchParams] = useSearchParams();
   let newSearchTerm = searchParams.get("q");
@@ -611,34 +612,190 @@ export default function Search() {
     "ZOLEDRONIC ACID",
   ];
 
-  const arr3 = [];
+  let arr3 = [
+    "AAA",
+    "ABBOTT",
+    "ABYSS PHARMA PVT LTD",
+    "ACULIFE NIRMA",
+    "ADD FREIGHT",
+    "ALBUS",
+    "ALKEM",
+    "ALKEM LABORATORIES LTD",
+    "ALNICHE LIFE",
+    "AMERICAN REMEDIES",
+    "AMNEAL HEALTHCARE PVT LTD",
+    "ARCHICARE",
+    "ARISTO",
+    "BAJAJ HEALTHCARE",
+    "BAXTER",
+    "BD",
+    "BENNET CRITICARE",
+    "BHARAT BIOTEC",
+    "BHARAT SERUMS AND VACCINES LIMITED",
+    "BIOCHEM",
+    "BIOCON",
+    "BIOLOGICAL E LIMITED",
+    "BOMBAY TABLET",
+    "BSV",
+    "CADILA HEALTHCARE LIMITED",
+    "CADILA PHARMACEUTICAL",
+    "CADIZ LIFESCIENCE",
+    "CARE FORMULATION LAB",
+    "CBC",
+    "CELON LABS",
+    "CIPLA",
+    "CIPLA LTD.",
+    "COAX BIOREMEDIES",
+    "CONCORD BIOTECH",
+    "CORONA RAMEDIES PVT LTD",
+    "CRITI PACE",
+    "CURATIO HEALTH CARE",
+    "DAXIA HEALTHCARE PVT LTD",
+    "DR MORPEN",
+    "DR.REDDY'S",
+    "ELCARE INDIA",
+    "ELDER",
+    "EMCURE",
+    "EVEPURE PHARMACEUTICALS",
+    "FLAGSHIP",
+    "FRESNIUS KABI",
+    "GAVALIS HEALTHCARE",
+    "GERMAN REMEDIES",
+    "GLAND PHARMA LTD",
+    "GLENMARK",
+    "GLS PHARMA",
+    "GUFIC BIO",
+    "HALSTED PHARMA",
+    "HELSE PHARMACEUTICALS",
+    "HETERO HEALHCARE",
+    "HETERO LABS LIMITED",
+    "HUMAN BIOLOGICAL INSTITUTE",
+    "ICHOR BIOLOGICS PVT LTD",
+    "INDOCO REMEDIES",
+    "INTAS",
+    "INTAS PHARMACUTICALS LTD",
+    "INTEGRITY PHARMACEUTICAL",
+    "IPCA",
+    "JOHNLEE PHARMACEUTICALS LTD",
+    "JUBLIANT",
+    "JUGGAT PHARMA",
+    "KHANDELWAL",
+    "KNOLL",
+    "LA RENON",
+    "LENITIV PHARMA",
+    "LUPIN",
+    "LYKA",
+    "MANKIND PHARMA",
+    "MAXFORD HEALTHCARE",
+    "MEDCURLS HEALTHCARE",
+    "MIRACALUS PHARMA PVT LTD",
+    "MOREPEN LAN",
+    "MSN",
+    "MYLAN",
+    "NAMCARE",
+    "NATCO PHARMA",
+    "NEON LAB",
+    "NOVO SCIENCE",
+    "NUCLEUS INC.",
+    "OTSUKA PHARMACEUTICALS",
+    "PANACEA",
+    "PENTAGON LABS LIMITED",
+    "PFIZER",
+    "PFIZER LIMITED",
+    "PHARMA CURE LABORATORIES",
+    "PLETHICO",
+    "PREVAGO HEALTHCARE",
+    "PUNISKA HEALTHCARE PVT LTD",
+    "RAMAN & WEIL COMPANY",
+    "RAYO PHARMA PVT LTD",
+    "REALCADE",
+    "RELIANCE LIFE SCIENCES",
+    "ROCHE",
+    "ROSELABS BIOSCIENCES LTD",
+    "RPG",
+    "SAMARTH LIFE SCIENCES PVT.LTD",
+    "SANOFI INDIA LTD",
+    "SARABHAI",
+    "SCUTONIX LIFESCIENCES PVT LTD.",
+    "SEARLE",
+    "SERUM INSTITUTE OF INDIA PVT LTD",
+    "STEADFAST",
+    "STELLEX HEALTHCARE PVT LTD",
+    "STERIS HEALTHCARE",
+    "SUN PHARMA",
+    "TABLETS INDIA LIMTED",
+    "TAXANE HEALHCARE",
+    "THEMIS",
+    "TORRENT",
+    "TROIKAA",
+    "TTK HEALTHCARE LIMITED",
+    "UNIJULES LIFE SCIENCES LTD",
+    "USV",
+    "VENUS REMEDIES LIMITED",
+    "VHB LIFE SCIENCES LIMITED",
+    "WILL IMPEX PHARMACHEM PVT LTD",
+    "WOCKHARDT LIMITED",
+    "WOHLTAT LIFE SCIENCES",
+    "ZUVENTUS",
+    "ZYCARE",
+    "ZYDUS",
+    "ZYDUS CADILA",
+    "ZYDUS NEPHROSCIENCES",
+  ];
+
+  const arr4  = [];
+  const arr5 = [];
+
 //   let search_component;
   
-    let result = false;
+    let result1 = false;
+    let result2 = false;
+    let result3 = true;
+
   let index2 = 0;
-  const search_data = () => {
+  let index3 = 0;
+  
+    const search_data = () => {
     for(let i1 in arr2){
-        result = true;
+        result1 = true;
+
         index2 = index2 + 1;
         if(arr2[i1].toLowerCase().includes(newSearchTerm.toLowerCase())){
-            arr3.push(arr2[i1]);
+            arr4.push(arr2[i1]);
         }
     }
-    if(arr3.length === 0){
-        result = false;
-        arr3.push("No data found");
+
+    for(let i1 in arr3){
+        result2 = true;
+
+        index3 = index3 + 1;
+        if(arr3[i1].toLowerCase().includes(newSearchTerm.toLowerCase())){
+            arr5.push(arr3[i1]);
+        }
     }
+
+    if(arr4.length === 0){
+        result1 = false;
+    }
+    
+    if(arr5.length === 0){
+        result2 = false;
+    }
+    if(arr4.length === 0 && arr5.length === 0){
+        result3 = false;
+    }
+
   }
     search_data();
   return(
     <>
-    {result ? <div>
+    {result1 ? <div>
         <div style={{ paddingBlock: "30px" }}>
-            <h2 style={{ textAlign: "center", paddingBottom:"20px"}}>Search Result</h2>
+            <h2 style={{ textAlign: "center", paddingBottom:"20px"}}>Search Product</h2>
           <div style={{ display: "flex", flexWrap: "wrap" }}>
-            {arr3.map((value2, index_value) => (
+            {arr4.map((value2, index_value_1) => (
               <div
-                key={index_value + 1}
+                key={index_value_1 + 1}
                 className="card_width"
                 style={{ paddingBlockEnd: "25px" }}
               >
@@ -657,8 +814,38 @@ export default function Search() {
             ))}
           </div>
         </div>
-      </div> : 
-      <div style={{display:"flex", justifyContent:"center", padding:"10%"}}><h1 style={{padding:"3%", border:"1px solid black"}}>Nothing Found</h1></div>}
+      </div> : ""}
+
+      {result2 ? <div>
+        <div style={{ paddingBlock: "30px" }}>
+            <h2 style={{ textAlign: "center", paddingBottom:"20px"}}>Search Company</h2>
+          <div style={{ display: "flex", flexWrap: "wrap" }}>
+            {arr5.map((value3, index_value_2) => (
+              <div
+                key={index_value_2 + 1}
+                className="card_width"
+                style={{ paddingBlockEnd: "25px" }}
+              >
+                <div className="card">
+                  <img
+                    src={image1}
+                    alt="Denim Jeans"
+                    style={{ width: "100%", borderTopLeftRadius: "5px", borderTopRightRadius:"5px" }}
+                  />
+                  <br />
+                  <h3 style={{ fontSize: "medium" }}>{value3}</h3>
+                  <br />
+                  <button>Add to Cart</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div> : ""}
+
+      {
+        result3 ? "" : <div style={{textAlign:"center", paddingBlock:"30px"}}><h2>No Result Found</h2></div>
+      }
 </>
   )
 };
