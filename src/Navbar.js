@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { createSearchParams, useLocation, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
@@ -13,6 +13,21 @@ export default function Navbar(props) {
   useEffect(() => {
     setIsHomePath(location.pathname === "/");
   }, [location.pathname]);
+
+  
+  const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState(null);
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+    if ((e.key === "Enter" || e.button === 0) && searchTerm) {
+      setSearchTerm(null);
+      navigate({
+        pathname: "/search",
+        search: `?${createSearchParams({ q: searchTerm })}`,
+      });
+    }
+  };
 
   return (
     <div className="wholediv_navbar">
@@ -45,7 +60,7 @@ export default function Navbar(props) {
         </div>
         <div className="searchicon">
           <div className="input-wrapper">
-            <button className="icon">
+            <button className="icon" onClick={handleSearch}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -57,14 +72,14 @@ export default function Navbar(props) {
                   strokeLinejoin="round"
                   strokeLinecap="round"
                   strokeWidth="1.5"
-                  stroke="#fff"
+                  stroke="black"
                   d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
                 ></path>
                 <path
                   strokeLinejoin="round"
                   strokeLinecap="round"
                   strokeWidth="1.5"
-                  stroke="#fff"
+                  stroke="black"
                   d="M22 22L20 20"
                 ></path>
               </svg>
@@ -74,6 +89,8 @@ export default function Navbar(props) {
               className="input"
               name="text"
               type="text"
+              onKeyUp={handleSearch}
+              onChange={handleSearch}
             />
           </div>
         </div>

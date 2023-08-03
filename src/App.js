@@ -7,6 +7,7 @@ import "./App.css";
 import "./Dropdownmenu";
 import Dropdownmenu from "./Dropdownmenu";
 import Companyitems from "./Companyitems";
+import Search from "./Search";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               </div>
             }
           ></Route>
+          <Route path="/search" element={<Search/>}></Route>
           <Route path="/about" element={<Dropdownmenu></Dropdownmenu>}></Route>
           <Route path="/aboutus" element={<Dropdownmenu></Dropdownmenu>}></Route>
           <Route
