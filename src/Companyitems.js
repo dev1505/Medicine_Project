@@ -1,6 +1,6 @@
 import React from "react";
 import "./MedicineInfo.css";
-import image2 from "./Companyinfo_3.jpg"
+import image2 from "./Companyinfo_3.jpg";
 
 export default function Companyitems() {
   let arr2 = [
@@ -148,10 +148,14 @@ export default function Companyitems() {
                   <img
                     src={image2}
                     alt="ImageError"
-                    style={{ width: "100%",borderTopLeftRadius: "5px", borderTopRightRadius:"5px" }}
+                    style={{
+                      width: "100%",
+                      borderTopLeftRadius: "5px",
+                      borderTopRightRadius: "5px",
+                    }}
                   />
                   <br />
-                  <h3 style={{ fontSize: "medium"}}>{value}</h3>
+                  <h3 style={{ fontSize: "medium" }}>{value}</h3>
                   <br />
                   <button>Add to Cart</button>
                 </div>

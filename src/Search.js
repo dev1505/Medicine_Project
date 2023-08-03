@@ -4,7 +4,7 @@ import image1 from "./Companyinfo_1.jpg";
 import "./MedicineInfo.css";
 import { dividerClasses } from "@mui/material";
 export default function Search() {
-    let [searchParams] = useSearchParams();
+  let [searchParams] = useSearchParams();
   let newSearchTerm = searchParams.get("q");
   let arr2 = [
     " LIGNOCAINE & ADRENALINE",
@@ -743,109 +743,132 @@ export default function Search() {
     "ZYDUS NEPHROSCIENCES",
   ];
 
-  const arr4  = [];
+  const arr4 = [];
   const arr5 = [];
 
-//   let search_component;
-  
-    let result1 = false;
-    let result2 = false;
-    let result3 = true;
+  //   let search_component;
+
+  let result1 = false;
+  let result2 = false;
+  let result3 = true;
 
   let index2 = 0;
   let index3 = 0;
-  
-    const search_data = () => {
-    for(let i1 in arr2){
-        result1 = true;
 
-        index2 = index2 + 1;
-        if(arr2[i1].toLowerCase().includes(newSearchTerm.toLowerCase())){
-            arr4.push(arr2[i1]);
-        }
-    }
+  const search_data = () => {
+    for (let i1 in arr2) {
+      result1 = true;
 
-    for(let i1 in arr3){
-        result2 = true;
-
-        index3 = index3 + 1;
-        if(arr3[i1].toLowerCase().includes(newSearchTerm.toLowerCase())){
-            arr5.push(arr3[i1]);
-        }
-    }
-
-    if(arr4.length === 0){
-        result1 = false;
-    }
-    
-    if(arr5.length === 0){
-        result2 = false;
-    }
-    if(arr4.length === 0 && arr5.length === 0){
-        result3 = false;
-    }
-
-  }
-    search_data();
-  return(
-    <>
-    {result1 ? <div>
-        <div style={{ paddingBlock: "30px" }}>
-            <h2 style={{ textAlign: "center", paddingBottom:"20px"}}>Search Product</h2>
-          <div style={{ display: "flex", flexWrap: "wrap" }}>
-            {arr4.map((value2, index_value_1) => (
-              <div
-                key={index_value_1 + 1}
-                className="card_width"
-                style={{ paddingBlockEnd: "25px" }}
-              >
-                <div className="card">
-                  <img
-                    src={image1}
-                    alt="Denim Jeans"
-                    style={{ width: "100%", borderTopLeftRadius: "5px", borderTopRightRadius:"5px" }}
-                  />
-                  <br />
-                  <h3 style={{ fontSize: "medium" }}>{value2}</h3>
-                  <br />
-                  <button>Add to Cart</button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div> : ""}
-
-      {result2 ? <div>
-        <div style={{ paddingBlock: "30px" }}>
-            <h2 style={{ textAlign: "center", paddingBottom:"20px"}}>Search Company</h2>
-          <div style={{ display: "flex", flexWrap: "wrap" }}>
-            {arr5.map((value3, index_value_2) => (
-              <div
-                key={index_value_2 + 1}
-                className="card_width"
-                style={{ paddingBlockEnd: "25px" }}
-              >
-                <div className="card">
-                  <img
-                    src={image1}
-                    alt="Denim Jeans"
-                    style={{ width: "100%", borderTopLeftRadius: "5px", borderTopRightRadius:"5px" }}
-                  />
-                  <br />
-                  <h3 style={{ fontSize: "medium" }}>{value3}</h3>
-                  <br />
-                  <button>Add to Cart</button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div> : ""}
-
-      {
-        result3 ? "" : <div style={{textAlign:"center", paddingBlock:"30px"}}><h2>No Result Found</h2></div>
+      index2 = index2 + 1;
+      if (arr2[i1].toLowerCase().includes(newSearchTerm.toLowerCase())) {
+        arr4.push(arr2[i1]);
       }
-</>
-  )
-};
+    }
+
+    for (let i1 in arr3) {
+      result2 = true;
+
+      index3 = index3 + 1;
+      if (arr3[i1].toLowerCase().includes(newSearchTerm.toLowerCase())) {
+        arr5.push(arr3[i1]);
+      }
+    }
+
+    if (arr4.length === 0) {
+      result1 = false;
+    }
+
+    if (arr5.length === 0) {
+      result2 = false;
+    }
+    if (arr4.length === 0 && arr5.length === 0) {
+      result3 = false;
+    }
+  };
+  search_data();
+  return (
+    <>
+      {result1 ? (
+        <div>
+          <div style={{ paddingBlock: "30px" }}>
+            <h2 style={{ textAlign: "center", paddingBottom: "20px" }}>
+              Search Product
+            </h2>
+            <div style={{ display: "flex", flexWrap: "wrap" }}>
+              {arr4.map((value2, index_value_1) => (
+                <div
+                  key={index_value_1 + 1}
+                  className="card_width"
+                  style={{ paddingBlockEnd: "25px" }}
+                >
+                  <div className="card">
+                    <img
+                      src={image1}
+                      alt="Denim Jeans"
+                      style={{
+                        width: "100%",
+                        borderTopLeftRadius: "5px",
+                        borderTopRightRadius: "5px",
+                      }}
+                    />
+                    <br />
+                    <h3 style={{ fontSize: "medium" }}>{value2}</h3>
+                    <br />
+                    <button>Add to Cart</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
+
+      {result2 ? (
+        <div>
+          <div style={{ paddingBlock: "30px" }}>
+            <h2 style={{ textAlign: "center", paddingBottom: "20px" }}>
+              Search Company
+            </h2>
+            <div style={{ display: "flex", flexWrap: "wrap" }}>
+              {arr5.map((value3, index_value_2) => (
+                <div
+                  key={index_value_2 + 1}
+                  className="card_width"
+                  style={{ paddingBlockEnd: "25px" }}
+                >
+                  <div className="card">
+                    <img
+                      src={image1}
+                      alt="Denim Jeans"
+                      style={{
+                        width: "100%",
+                        borderTopLeftRadius: "5px",
+                        borderTopRightRadius: "5px",
+                      }}
+                    />
+                    <br />
+                    <h3 style={{ fontSize: "medium" }}>{value3}</h3>
+                    <br />
+                    <button>Add to Cart</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
+
+      {result3 ? (
+        ""
+      ) : (
+        <div style={{ textAlign: "center", paddingBlock: "30px" }}>
+          <h2>No Result Found</h2>
+        </div>
+      )}
+    </>
+  );
+}

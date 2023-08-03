@@ -625,7 +625,11 @@ export default function MedicineInfo() {
                   <img
                     src={image1}
                     alt="Denim Jeans"
-                    style={{ width: "100%", borderTopLeftRadius: "5px", borderTopRightRadius:"5px" }}
+                    style={{
+                      width: "100%",
+                      borderTopLeftRadius: "5px",
+                      borderTopRightRadius: "5px",
+                    }}
                   />
                   <br />
                   <h3 style={{ fontSize: "medium" }}>{value}</h3>

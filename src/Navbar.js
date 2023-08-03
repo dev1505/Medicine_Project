@@ -14,7 +14,6 @@ export default function Navbar(props) {
     setIsHomePath(location.pathname === "/");
   }, [location.pathname]);
 
-  
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState(null);
 
@@ -37,26 +36,25 @@ export default function Navbar(props) {
         </a>
       </div>
       <div className="link_item_style_display">
-        
         <div className="home_firms">
-        <div className="link_item_individual_style_display">
-          <Link className="link_underline_style" to="/">
-            <button
-              className={
-                isHomePath
-                  ? "button1 hello active1"
-                  : "button1 hello color_none"
-              }
-            >
-              Home
-            </button>
-          </Link>
-        </div>
-        <div>
           <div className="link_item_individual_style_display">
-            <Dropdownmenu className="link_underline_style"></Dropdownmenu>
+            <Link className="link_underline_style" to="/">
+              <button
+                className={
+                  isHomePath
+                    ? "button1 hello active1"
+                    : "button1 hello color_none"
+                }
+              >
+                Home
+              </button>
+            </Link>
           </div>
-        </div>
+          <div>
+            <div className="link_item_individual_style_display">
+              <Dropdownmenu className="link_underline_style"></Dropdownmenu>
+            </div>
+          </div>
         </div>
         <div className="searchicon">
           <div className="input-wrapper">
@@ -94,7 +92,6 @@ export default function Navbar(props) {
             />
           </div>
         </div>
-
       </div>
     </div>
   );
