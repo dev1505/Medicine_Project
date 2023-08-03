@@ -2,7 +2,6 @@ import React from "react";
 import { useSearchParams } from "react-router-dom";
 import image1 from "./Companyinfo_1.jpg";
 import "./MedicineInfo.css";
-import { dividerClasses } from "@mui/material";
 export default function Search() {
   let [searchParams] = useSearchParams();
   let newSearchTerm = searchParams.get("q");
