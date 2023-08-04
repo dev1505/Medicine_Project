@@ -5,6 +5,7 @@ import "./MedicineInfo.css";
 export default function Search() {
   let [searchParams] = useSearchParams();
   let newSearchTerm = searchParams.get("q");
+  
   let arr2 = [
     " LIGNOCAINE & ADRENALINE",
     "6MERCOPTIN",
@@ -759,7 +760,7 @@ export default function Search() {
       result1 = true;
 
       index2 = index2 + 1;
-      if (arr2[i1].toLowerCase().includes(newSearchTerm.toLowerCase())) {
+      if ((arr2[i1].toLowerCase().includes(newSearchTerm.toLowerCase()))) {
         arr4.push(arr2[i1]);
       }
     }
