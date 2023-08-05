@@ -11,6 +11,7 @@ import Search from "./Search";
 import Loader from "./Loader";
 import React from "react";
 
+
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
 
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <>
+    {isLoading ? (<Loader></Loader>) : (
       <BrowserRouter>
         
         <div className="background_image_setting_style">
@@ -30,7 +32,7 @@ function App() {
             <Navbar title="Shree Khodiyar Medicine House" />
           </div>
         </div>
-        {isLoading ? (<Loader></Loader>) : (<Routes>
+        <Routes>
           <Route
             path="/"
             element={
@@ -53,8 +55,8 @@ function App() {
             element={<MedicineInfo></MedicineInfo>}
           ></Route>
         </Routes>
-      )  }
-        </BrowserRouter>
+        
+        </BrowserRouter>)}
     </>
   );
 }

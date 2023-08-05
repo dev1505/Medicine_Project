@@ -1,7 +1,10 @@
 import React from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams} from "react-router-dom";
+// import { useState, useEffect } from "react";
 import image1 from "./Companyinfo_1.jpg";
 import "./MedicineInfo.css";
+// import Searchloader from "./Searchloader"; 
+
 export default function Search() {
   let [searchParams] = useSearchParams();
   let newSearchTerm = searchParams.get("q");
@@ -785,7 +788,27 @@ export default function Search() {
       result3 = false;
     }
   };
+
+  // const [isLoad, setisLoad] = useState(true);
+
+  // // Simulate a delay to hide the loader after a few seconds
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setisLoad(false);
+  //   }, 2000);
+  //   setisLoad(true);
+  // }, []);
+
+  // const loader_function = () => {
+  
+  //   isLoad ? (<Searchloader></Searchloader>) : (search_data());
+
+  // }
+
+  // loader_function()
+
   search_data();
+
   return (
     <>
       {result1 ? (

@@ -1,15 +1,22 @@
 import React from "react";
+import "./Searchloader.css";
 
-export default function SearchLoader() {
+export default function Search_Loader() {
   return (
-    <div>
-      <div class="typewriter">
-        <div class="slide">
-          <i></i>
+    <>
+      <div>
+        <div className="hourglassBackground">
+          <div className="hourglassContainer">
+            <div className="hourglassCurves"></div>
+            <div className="hourglassCapTop"></div>
+            <div className="hourglassGlassTop"></div>
+            <div className="hourglassSand"></div>
+            <div className="hourglassSandStream"></div>
+            <div className="hourglassCapBottom"></div>
+            <div className="hourglassGlass"></div>
+          </div>
         </div>
-        <div class="paper"></div>
-        <div class="keyboard"></div>
       </div>
-    </div>
+    </>
   );
 }
