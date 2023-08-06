@@ -31,9 +31,9 @@ export default function Navbar(props) {
   return (
     <div className="wholediv_navbar">
       <div className="title_style_display">
-        <a className="link_underline_style1" href="/">
+        <Link className="link_underline_style1" to="/">
           {props.title}
-        </a>
+        </Link>
       </div>
       <div className="link_item_style_display">
         <div className="home_firms">
