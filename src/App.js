@@ -19,7 +19,7 @@ function App() {
   React.useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 4000); // Change the timeout as needed
+    }, 2500); // Change the timeout as needed
   }, []);
 
   return (

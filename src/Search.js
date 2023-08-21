@@ -3,7 +3,7 @@ import { useSearchParams} from "react-router-dom";
 // import { useState, useEffect } from "react";
 import image1 from "./Companyinfo_1.jpg";
 import "./MedicineInfo.css";
-// import Searchloader from "./Searchloader"; 
+// import Searchloader from "./Searchloader";
 
 export default function Search() {
   let [searchParams] = useSearchParams();
@@ -789,26 +789,22 @@ export default function Search() {
     }
   };
 
-  // const [isLoad, setisLoad] = useState(true);
+  // const [load , setLoad] = useState(false)
 
-  // // Simulate a delay to hide the loader after a few seconds
   // useEffect(() => {
   //   setTimeout(() => {
-  //     setisLoad(false);
+  //     setLoad(true)
   //   }, 2000);
-  //   setisLoad(true);
-  // }, []);
+  // }, [])
 
-  // const loader_function = () => {
-  
-  //   isLoad ? (<Searchloader></Searchloader>) : (search_data());
-
+  // if(!load){
+  //   return (<Searchloader/>) 
+  // }
+  // else{
+  //   search_data();
   // }
 
-  // loader_function()
-
   search_data();
-
   return (
     <>
       {result1 ? (
